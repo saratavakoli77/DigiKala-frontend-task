@@ -21,7 +21,7 @@ ol, ul {
 body {
     font-family: 'Lato', sans-serif;
     min-height: 100vh;
-    background: #f6f6f6;
+    background: #d6ebf0;
     overflow: hidden;
 }
 
@@ -252,7 +252,7 @@ nav {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background: radial-gradient(#7ed56f, #28b485);
+    background: radial-gradient(#9bdae5, #bdbebe);
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1),-webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 

@@ -1,5 +1,7 @@
 const nameInput = $('#todoName');
 const list = $('.js-list');
+const searchContainer = $('.js-search-container');
+const searchInput = $('.js-search-input');
 
 const createTodo = function() {
     const name = nameInput.val();
@@ -44,5 +46,28 @@ $(function() {
             $(event.target).closest('.todo').remove();
             event.stopPropagation();
         }
+    });
+
+    searchInput.on('keyup', function(event) {
+        const term = searchInput.val();
+
+        if (!term.trim().length) {
+            list.find('li').show();
+            return;
+        }
+
+        list.find('li').each(function(index, item) {
+            let todoText = $(item).find('.todo-text').val();
+            
+            if (todoText.indexOf(term) !== -1) {
+                $(item).show();
+            } else {
+                $(item).hide();
+            }
+        });
+    });
+
+    $('.js-toggle-search').click(function() {
+        searchContainer.toggleClass('open');
     });
 });
