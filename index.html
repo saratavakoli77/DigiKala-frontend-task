@@ -5,13 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo List</title>
-    
+
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
 
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="help">
+                <input type="checkbox" id="help-toggle" name="help-toggle">
+                <label for="help-toggle" class="help-btn">
+                    <i class="fas fa-info"></i>
+                </label>
+                <div class="help-background">&ensp;</div>
+                <div class="help-content">
+                    <h2>Todo List</h2>
+                    <p>
+                        1. You can add new " todo "<br>
+                        2. Edit " todo " (By clicking on its name)<br>
+                        3. Search and surf through " todo " s<br>
+                        4. Set " todo " as done<br>
+                        5. Remove " todo "<br>
+                    </p>
+                    <span><i>Developed by Sara Tavakoli</i></span>
+                </div>
+            </div>
+            <div class="search">
+                <i class="fas fa-search js-toggle-search search-icon"></i>
+                <div class="search-input-container js-search-container">
+                    <input type="text" class="search-input js-search-input" placeholder="Search todos">
+                </div>
+            </div>
+        </nav>
+        </header>
     <main>
         <h1>TodoS</h1>
         <div class="container">
