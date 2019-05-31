@@ -1,11 +1,36 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-  }
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    background: #f6f6f6;
+    overflow: hidden;
+}
+
+main {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    min-width: 400px;
+}
   
-  *, *:before, *:after {
+*, *:before, *:after {
     box-sizing: inherit;
-  }
+}
+
+body, h1, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
 
 h1 {
     text-align: center;
@@ -13,4 +38,113 @@ h1 {
     margin-bottom: 15px;
     font-weight: bold;
     color: #fe67ceab;
+}
+
+.container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 5px 2px rgba(0, 0, 0, .1);
+    padding: 8px 15px;
+}
+
+.create-todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-todo-input {
+    flex-grow: 1;
+    border: 0;
+    font-size: 1.1rem;
+    color: #8f8f8f;
+}
+
+.create-todo-input::-webkit-input-placeholder {
+    color: #c6c6c6;
+}
+
+.create-todo-input:focus {
+    outline: 0;
+}
+
+.create-todo-btn {
+    width: 30px;
+    height: 30px;
+    background: #6eff6e;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.list {
+    overflow-y: auto;
+    margin-right: -15px;
+    padding-right: 15px;
+}
+
+.list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: darkgrey;
+}
+
+.todo {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.todo:first-child {
+    border-top: 1px solid #f1f1f1;
+    margin-top: 10px;
+}
+
+.todo-state {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6eff6e;
+}
+
+.todo-state i {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.todo.done .todo-state i {
+    opacity: 1;
+}
+
+.todo.done .todo-text {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.todo-remove {
+    color: #ff7878b3;
+    cursor: pointer;
+}
+
+.todo-text {
+    border: 0;
+    flex-grow: 1;
+}
+
+.todo-text:focus {
+    outline: none;
+    color: gray;
 }
